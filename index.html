@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="A modern weather application using OpenWeatherMap API">
+
+    <title>WeatherNow || Faizan Khan</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span>☁️</span>
+                <h1>WeatherNow</h1>
+            </div>
+
+            <p>Know your weather, anywhere.</p>
+        </header>
+
+
+        <!-- Search Section -->
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Search city..."
+                    autocomplete="off"
+                >
+
+                <button id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+            <p id="message"></p>
+
+        </section>
+
+
+        <!-- Loading -->
+        <div class="loader" id="loader">
+
+            <div class="spinner"></div>
+
+            <p>Fetching weather...</p>
+
+        </div>
+
+
+        <!-- Weather Card -->
+        <section class="weather-card" id="weatherCard">
+
+            <!-- Location -->
+            <div class="location">
+
+                <span>📍</span>
+
+                <div>
+                    <h2 id="cityName">--</h2>
+                    <p id="country">--</p>
+                </div>
+
+            </div>
+
+
+            <!-- Main Weather -->
+            <div class="main-weather">
+
+                <div
+                    class="weather-icon"
+                    id="weatherIcon">
+                    🌤️
+                </div>
+
+                <div class="temperature">
+
+                    <h3>
+                        <span id="temperature">--</span>°C
+                    </h3>
+
+                    <p id="condition">
+                        --
+                    </p>
+
+                    <span class="feels">
+                        Feels like
+                        <b id="feelsLike">--</b>°C
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Weather Details -->
+            <div class="details">
+
+                <!-- Humidity -->
+                <div class="detail-box">
+
+                    <div class="detail-icon">
+                        💧
+                    </div>
+
+                    <div>
+                        <span>Humidity</span>
+                        <strong id="humidity">--%</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- Wind -->
+                <div class="detail-box">
+
+                    <div class="detail-icon">
+                        💨
+                    </div>
+
+                    <div>
+                        <span>Wind Speed</span>
+                        <strong>
+                            <span id="wind">--</span> m/s
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <!-- Pressure -->
+                <div class="detail-box">
+
+                    <div class="detail-icon">
+                        🌡️
+                    </div>
+
+                    <div>
+                        <span>Pressure</span>
+                        <strong>
+                            <span id="pressure">--</span> hPa
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <!-- Visibility -->
+                <div class="detail-box">
+
+                    <div class="detail-icon">
+                        👁️
+                    </div>
+
+                    <div>
+                        <span>Visibility</span>
+                        <strong>
+                            <span id="visibility">--</span> km
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Last Updated -->
+            <div class="updated">
+                Last updated:
+                <span id="updatedTime">--</span>
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+     <footer>
+    <p>
+        Powered by
+        <a href="https://openweathermap.org/" target="_blank">
+            OpenWeatherMap
+        </a>
+    </p>
+
+    <p class="developer">
+        Developed by <strong>Faizan</strong>
+    </p>
+</footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
